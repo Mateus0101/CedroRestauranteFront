@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <br>
+  <br>
+  <p>
+    <b>Cadastrar Restaurante:</b>
+  </p>
+  <br>
+  <br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="container" id="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Restaurante</label>
+        <input type="text" class="form-control" id="validationCustom01" name="nome" ngModel required>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+  </form>
+</div>

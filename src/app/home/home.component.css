@@ -1,9 +1,5 @@
-.container-fluid{
-    width: 900px;
-}
-
 body{
-    background-image:url(assets/Cedro5.jpg);
+    background-image:url(../../assets/Cedro5.jpg);
     width:100%;
     height:552px;
     background-repeat: no-repeat;

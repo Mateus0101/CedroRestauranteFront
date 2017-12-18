@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <br>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Restaurante</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+        <th scope="col">Novo Prato</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{restauranteNome.nome}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="editar(restauranteNome)">Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="delete(restauranteNome)">Excluir</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="pratoCreate(restauranteNome)">Novo Prato</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Pratos</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prato of pratos">
+        <td>{{prato.nome}}</td>
+        <td>{{prato.preco}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="editarPrato(prato)">Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="deletePrato(prato)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
