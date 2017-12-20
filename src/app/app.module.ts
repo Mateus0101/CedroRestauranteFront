@@ -14,6 +14,7 @@ import { Pesquisa } from './restaurante/restaurante.pesquisa';
 import { HomeComponent } from './home/home.component';
 import { EditarPratoComponent } from './restaurante/prato/editar-prato/editar-prato.component';
 import { PratoComponent } from './restaurante/prato/prato.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PratoComponent } from './restaurante/prato/prato.component';
     Pesquisa,
     HomeComponent,
     PratoComponent,
-    EditarPratoComponent
+    EditarPratoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
