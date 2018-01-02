@@ -1,18 +1,15 @@
 <div class="container-fluid">
   <br>
-  <br>
-  <p>
-    <b>Editar Restaurante:</b>
-  </p>
-  <br>
-  <br>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="container" id="needs-validation" novalidate>
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom01">Restaurante</label>
-        <input type="text" class="form-control" id="validationCustom01" name="nome" [(ngModel)]="restauranteEdit.nome" required>
+  <fieldset class="form-group offset-sm-1" style="border: 2px solid #050e14; padding-bottom: 2%; border-radius:30px;">
+    <legend align="center" class="col-sm-5 col-md-5">Editar Restaurante</legend>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="container" id="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom01">Restaurante:</label>
+          <input type="text" style="width:750px" class="form-control" id="validationCustom01" name="nome" [(ngModel)]="restauranteEdit.nome" required placeholder="Novo Nome do Restaurante">
+        </div>
       </div>
-    </div>
-    <button class="btn btn-primary" type="submit">Salvar</button>
-  </form>
+      <button class="btn btn-primary" type="submit">Atualizar Restaurante</button>
+    </form>
+  </fieldset>
 </div>

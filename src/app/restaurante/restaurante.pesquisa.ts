@@ -5,12 +5,9 @@ import { RestauranteComponent } from './restaurante.component';
     name: 'pesquisa'
 })
 export class Pesquisa implements PipeTransform {
-
-    // transform(restaurante.restaurantes, digitado);
     transform(restaurantes, digitado) {
 
         digitado = digitado.toLowerCase();
-        // tslint:disable-next-line:no-shadowed-variable
         return restaurantes.filter( restaurantes => restaurantes.nome.toLowerCase().includes(digitado));
     }
 

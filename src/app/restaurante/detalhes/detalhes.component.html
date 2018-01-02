@@ -1,52 +1,73 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
 <div class="container-fluid">
   <br>
+  <h1 align="center">
+    <p>Restaurante {{restauranteNome.nome}}</p>
+  </h1>
   <br>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Restaurante</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Excluir</th>
-        <th scope="col">Novo Prato</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{restauranteNome.nome}}</td>
-        <td>
-          <button type="button" class="btn btn-outline-dark" (click)="editar(restauranteNome)">Editar</button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-outline-dark" (click)="delete(restauranteNome)">Excluir</button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-outline-dark" (click)="pratoCreate(restauranteNome)">Novo Prato</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <fieldset class="form-group offset-sm-1" style="border: 2px solid #050e14; padding-bottom: 2%; border-radius:30px;">
+    <legend class="col-sm-4 col-md-3">Restaurante</legend>
+    <table class="table" border="1px">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome do Restaurante</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+          <th scope="col">Novo Prato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{restauranteNome.nome}}</td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="editar(restauranteNome)">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="delete(restauranteNome)">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="pratoCreate(restauranteNome)">
+              <span class="glyphicon glyphicon-cutlery"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
   <br>
   <br>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Pratos</th>
-        <th scope="col">Preço</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Excluir</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let prato of pratos">
-        <td>{{prato.nome}}</td>
-        <td>{{prato.preco}}</td>
-        <td>
-          <button type="button" class="btn btn-outline-dark" (click)="editarPrato(prato)">Editar</button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-outline-dark" (click)="deletePrato(prato)">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <fieldset class="form-group offset-sm-1" style="border: 2px solid #050e14; padding-bottom: 2%; border-radius:30px;">
+    <legend class="col-sm-4 col-md-3">Pratos do dia</legend>
+    <table class="table" border="1px">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome dos Pratos</th>
+          <th scope="col">Preço dos Pratos</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prato of pratos">
+          <td>{{prato.nome}}</td>
+          <td>{{prato.preco}}</td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="editarPrato(prato)">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="deletePrato(prato)">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
 </div>

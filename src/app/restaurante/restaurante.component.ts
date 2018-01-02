@@ -22,30 +22,9 @@ export class RestauranteComponent implements OnInit {
     this.restaurante.restaurantesAll();
   }
 
-  // private create() {
-  //   this.restService.createRestaurant(this.restaurant.name)
-  //     .subscribe(
-  //     () => this.redirect()
-  //     );
-  // }
-
-  // private redirect() {
-  //   this.router.navigate(['/restaurants']);
-  // }
-
-  // refresh() {
-  //   location.reload();
-  //   this.restaurante.restaurantesAll();
-  // }
 
   details(restaurante) {
-    // this.restaurante.restauranteNome = this.campoValoImput.nativeElement.value;
     this.restaurante.restauranteNome = restaurante;
     this.router.navigateByUrl('/restaurante/details');
   }
-
-  // cad() {
-  //   this.router.navigateByUrl('/restaurante/salvar');
-  // }
-
 }

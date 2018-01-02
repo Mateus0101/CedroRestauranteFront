@@ -28,38 +28,24 @@ export class DetalhesComponent implements OnInit {
   }
 
   delete(restauranteNome) {
-    // this.restauranteDel(restauranteNome);
     this.restaurante.restauranteDelete(restauranteNome)
     .subscribe(null);
     console.log(restauranteNome);
     this.restaurante.restaurantesAll();
     this.router.navigateByUrl('/restaurante');
-    // this.router.navigate.apply('/restaurante');
   }
 
   editar(restauranteNome) {
-    // this.restaurante.restauranteDelete(restauranteNome)
-    // .subscribe(null);
-    // console.log(restauranteNome);
-    // this.restaurante.restaurantesAll();
     this.restaurante.restauranteEdit = restauranteNome;
     this.router.navigateByUrl('/restaurante/editar');
   }
 
   editarPrato(prato) {
-    // this.restaurante.restauranteDelete(restauranteNome)
-    // .subscribe(null);
-    // console.log(restauranteNome);
-    // this.restaurante.restaurantesAll();
     this.restaurante.pratos = prato;
     this.router.navigateByUrl('/restaurante/pratos/editar');
   }
 
   pratoCreate(restauranteNome) {
-    // this.restaurante.restauranteDelete(restauranteNome)
-    // .subscribe(null);
-    // console.log(restauranteNome);
-    // this.restaurante.restaurantesAll();
     this.restaurante.restaurant = restauranteNome;
     this.router.navigateByUrl('/restaurante/pratos');
   }

@@ -14,10 +14,6 @@ import { RestauranteService } from './../restaurante.service';
 })
 export class SalvarComponent implements OnInit {
 
-  // restauranteCad: any = {
-  //   nome: ''
-  // };
-
   constructor(private router: Router, private restaurante: RestauranteService) { }
 
   ngOnInit() {
@@ -29,9 +25,4 @@ export class SalvarComponent implements OnInit {
     this.restaurante.restaurantesAll();
     this.router.navigate(['/restaurante']);
   }
-
-  // teste() {
-  //   console.log(this.restauranteCad);
-  // }
-
 }
